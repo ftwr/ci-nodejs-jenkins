@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh './scripts/deploy.sh'
+                sh './deploy-prod.sh'
                 //input message: 'Finished using the web site? (Click "Proceed" to continue)'
             }
         }

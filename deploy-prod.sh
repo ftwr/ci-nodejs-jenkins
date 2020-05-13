@@ -1,6 +1,6 @@
 #!/bin/sh
-ssh ubuntu@NODE.SERVER.IP <<EOF
- cd ~/node-app
+ssh ubuntu@54.93.254.18 <<EOF
+ cd ~/ci-nodejs-jenkins
  git pull
  npm install — production
  pm2 restart all

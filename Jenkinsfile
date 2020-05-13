@@ -21,6 +21,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+                sh 'chmod +x deploy-prod.sh'
                 sh './deploy-prod.sh'
                 //input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 //sh './jenkins/scripts/kill.sh'

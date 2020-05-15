@@ -1,9 +1,7 @@
 pipeline {
     agent any
     tools {nodejs "NodeJS 14.2.0"}
-    //environment {
-    //    CI = 'true'
-    //}
+
     stages {
         stage('Build') {
             steps {
@@ -13,7 +11,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'echo "Integration test started..."'
+                
                 sh './test/test.sh'
             }
         }

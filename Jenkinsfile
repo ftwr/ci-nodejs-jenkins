@@ -1,11 +1,14 @@
 pipeline {
     agent any
     tools {nodejs "NodeJS 14.2.0"}
+    environment {
+        CI = 'true'
+    }
     stages {
         stage('Build') {
             steps {
                 sh 'npm install'
-                sh 'npm audit fix'
+                sh 'npm audit fix --force'
             }
         }
         stage('Test') {

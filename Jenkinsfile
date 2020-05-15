@@ -1,13 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:6-alpine'
-            args '-p 3000:3000'
-        }
-    }
-    environment {
-        CI = 'true'
-    }
+    agent any
     stages {
         stage('Build') {
             steps {
@@ -19,12 +11,9 @@ pipeline {
                 sh './test/test.sh'
             }
         }
-        stage('Deploy') {
+        stage('Deploy') { 
             steps {
-                sh 'chmod +x deploy-prod.sh'
                 sh './deploy-prod.sh'
-                //input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                //sh './jenkins/scripts/kill.sh'
             }
         }
     }

@@ -1,3 +1,3 @@
 #!/bin/sh
-set -x
+#set -x
 ./node_modules/.bin/mocha ./test/test.js

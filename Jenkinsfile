@@ -14,7 +14,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'echo "test will appear here as soon as..." '
-                //sh './test/test.sh'
+                sh './test/test.sh'
             }
         }
         stage('Deploy') { 

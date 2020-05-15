@@ -1,9 +1,9 @@
 pipeline {
     agent any
     tools {nodejs "NodeJS 14.2.0"}
-    environment {
-        CI = 'false' 
-    }
+    //environment {
+    //    CI = 'false' 
+    //}
     stages {
         stage('Build') {
             steps {
@@ -13,7 +13,6 @@ pipeline {
         }
         stage('Test') {
             steps {
-                
                 sh './test/test.sh'
             }
         }

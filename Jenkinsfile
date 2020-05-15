@@ -13,6 +13,7 @@ pipeline {
         }
         stage('Test') {
             steps {
+                sh 'echo "Integration test started..."'
                 sh './test/test.sh'
             }
         }

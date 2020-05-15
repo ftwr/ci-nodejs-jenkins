@@ -13,7 +13,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh './test/test.sh'
+                sh 'echo "test will appear here as soon as..." '
+                //sh './test/test.sh'
             }
         }
         stage('Deploy') { 
